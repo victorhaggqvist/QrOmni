@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QrOmni</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="qr.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>QrOmni</h1>
+      <canvas id="qr"></canvas>
+      <div class="controls">
+        <input type="text" id="data" class="form-control"><button type="button" id="reload" class="btn btn-primary">Reload</button>
+      </div>
+      <p class="about">
+      Created by Victor Häggqvist using <a href="https://github.com/neocotic/qr.js">qr.js</a> and <a href="">bootstrap</>.<br>
+      View source on <a href="">Github</a><br>
+      Licensed under GPL v3
+      </p>
+    </div>
+    <script src="qr.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
