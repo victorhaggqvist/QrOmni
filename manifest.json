@@ -1,7 +1,7 @@
 {
   "name": "QR Omni",
   "description": "Create QR codes dierctly from the Chrome omni bar.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "manifest_version": 2,
   "omnibox": { "keyword" : "qr" },
   "background": {
