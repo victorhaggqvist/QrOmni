@@ -1,38 +1,26 @@
-/*window.onload=function () {
-var data = window.location.hash.substring(1);
-  // Get image for rendered QR code
-  var image = qr.image({
-    size: 8,
-    level: 'H',
-    value: data
-  });
-  // Check image was returned (may not have been if browser doesn't support the
-  // HTML5 canvas element)
-  if (image) {
-  document.getElementById("qrcode").src=image.src;
-  //$("#qrcode")=image;
-	console.log("done");
-    // Add image to page
-//    document.body.appendChild(image);
-  }
-};*/
-
-window.onload=function () {
-  var data = window.location.hash.substring(1);
+function makeQr(data){
   qr.canvas({
       size: 8,
       level: 'H',
-      value: data,
+      value: (data===undefined)?document.getElementById("data").value:data,
       canvas: document.getElementById('qr')
     });
+}
+
+window.onload = function () {
+  var data = window.location.hash.substring(1);
+  makeQr(data);
   document.getElementById("data").value=data;
 };
 
-document.getElementById("reload").onclick=function(){
-  qr.canvas({
-      size: 8,
-      level: 'H',
-      value: document.getElementById("data").value,
-      canvas: document.getElementById('qr')
-    });
+document.getElementById("reload").onclick = function(){
+  makeQr();
+};
+
+document.getElementById("data").onchange = function(){
+  makeQr();
+};
+
+document.getElementById("data").onkeyup = function(){
+  makeQr();
 };
