@@ -1,5 +1,5 @@
 {
-  "name": "QR Omni",
+  "name": "QrOmni",
   "description": "Create QR codes dierctly from the Chrome omni bar.",
   "version": "0.1.3",
   "manifest_version": 2,
